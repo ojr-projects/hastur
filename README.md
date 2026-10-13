@@ -55,25 +55,25 @@ contrasts), where false calls from other tools pile up. Its strength is trust at
 a single clean ChIP experiment.
 
 **Known weak spots:**
-- GC-selected human windows with a random background. Use a matched background; see below.
+- GC-selected human windows with a random background. Supply a composition-matched `bg.fa` instead; see below.
 - Sets of about 25 sequences are calibrated but conservative.
 
-## Optional: matched genome backgrounds (Mode A)
+## Retired: matched genome backgrounds (Mode A)
 
-`tools/matched_background/` builds a background matched tile by tile to the foreground on GC, CpG o/e, repeat share
-and class, and optionally TSS distance, drawn from an hg38 covariate index.
-- **Result** (`benchmarks/splits/protocol_MA1.md`): on GC-selected human null sets, false calls per run fell from
-  3.70 / 2.70 to 0.05 / 0.05 (N = 2,000 / 500). Exchangeable nulls stayed ≤ 0.10.
-- **Cost:** ChIP sensitivity went from 23/27 to 22/27 (a CpG-promoter factor was lost).
-- **Recommendation:** use it when the foreground is composition-selected. It is not the default. It changes only the
-  input `bg.fa`; the engine is unchanged.
+An hg38 matched-background builder (Python, formerly `tools/matched_background/`) was retired on 2026-10-13 and removed
+from the repository. It is not part of HASTUR.
+- **What it showed** (`benchmarks/splits/protocol_MA1.md`): on GC-selected human null sets, a background matched on
+  GC, CpG o/e and repeat share cut false calls per run from 3.70 / 2.70 to 0.05 / 0.05 (N = 2,000 / 500).
+- **Why it was retired:** the failure it fixes is narrow, and on real ChIP it gained nothing (23/27 → 22/27 on test2;
+  40/58 in every arm on test3).
+- **If your foreground is composition-selected,** build a GC/CpG-matched `bg.fa` with any tool you trust. The engine
+  only reads the two FASTA files.
 
 ## Layout
 
 | path | what |
 |---|---|
 | `src/` | the engine: counting, statistics and max-T in `main.rs`; representation in `represent.rs`; NumPy-compatible RNG in `nprng.rs` |
-| `tools/matched_background/` | Mode A background builder (Python) |
 | `benchmarks/` | registered protocols, splits and truths, the harness, result reports (see its README) |
 | `theory/` | THEORY.md and the numerical checks behind it (c1–c8) |
 | `docs/` | development insights, the deep-model literature review, and `history/` (roadmaps, the PROMETHEUS plan, the Comsequent background) |

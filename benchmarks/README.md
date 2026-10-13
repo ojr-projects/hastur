@@ -34,8 +34,9 @@ Each quick look ran HASTUR first; comparators were added only where a win looked
   - GC-selected human nulls: false calls per run fell from 3.70 / 2.70 to 0.05 / 0.05;
   - exchangeable nulls stayed ≤ 0.10;
   - held-out ChIP sensitivity went from 23/27 to 22/27.
-  - Kept as an option (`tools/matched_background/`), not as the default.
+  - Not adopted as the default; the builder was kept as an option, then retired and removed on 2026-10-13.
 - **MA2:** 94-factor test3 ChIP, stopped at 58 factors. Sensitivity was 40/58 in every arm.
+- **Status:** retired. The matched-background code is no longer in this repository.
 
 ## Development rounds (LN-series)
 
