@@ -1,0 +1,90 @@
+== small-N nulls: native false calls per run, by size bin
+tool    hlat_a3  hlat_y1  hlat_y2  hlat_y3
+bin                                       
+<=15      3.000    0.117    0.000    0.100
+16-30     1.817    0.217    0.033    0.067
+31-60     1.433    0.367    0.033    0.267
+61-200    0.617    0.250    0.017    0.100
+
+  by genome:
+tool     hlat_a3  hlat_y1  hlat_y2  hlat_y3
+genome                                     
+cglut      1.457    0.143    0.014    0.086
+pputida    1.486    0.171    0.029    0.171
+saureus    2.329    0.343    0.014    0.086
+
+  pooled: {'hlat_a3': 1.757, 'hlat_y1': 0.219, 'hlat_y2': 0.019, 'hlat_y3': 0.114}
+
+== simulated nulls (null_v2): false calls per run
+tool      hlat_a3  hlat_y1  hlat_y2  hlat_y3
+kind                                        
+cpgshift     0.05     4.45     4.45     0.00
+iid          0.05     0.00     0.10     0.00
+markov       0.10     0.00     0.05     0.05
+
+== ChIP dev (matrix readout)
+              units  p5_10  located10  best_sim  n_calls
+n    tool                                               
+25   hlat_a3     57  0.351      0.158     0.763      8.0
+     hlat_y1     57  0.333      0.070     0.750      8.0
+     hlat_y2     57  0.351      0.053     0.769      8.0
+     hlat_y3     57  0.386      0.140     0.781      7.0
+50   hlat_a3     57  0.561      0.175     0.834      4.0
+     hlat_y1     57  0.544      0.211     0.806      5.0
+     hlat_y2     57  0.632      0.175     0.829      5.0
+     hlat_y3     57  0.561      0.211     0.835      4.0
+100  hlat_a3     57  0.491      0.211     0.832      2.0
+     hlat_y1     57  0.737      0.298     0.855      3.0
+     hlat_y2     57  0.737      0.316     0.852      3.0
+     hlat_y3     57  0.596      0.281     0.847      2.0
+250  hlat_a3     57  0.754      0.351     0.877      2.0
+     hlat_y1     57  0.789      0.351     0.882      2.0
+     hlat_y2     57  0.772      0.368     0.863      2.0
+     hlat_y3     57  0.719      0.281     0.858      2.0
+500  hlat_a3     57  0.825      0.368     0.885      2.0
+     hlat_y1     57  0.825      0.351     0.888      2.0
+     hlat_y2     57  0.825      0.351     0.870      2.0
+     hlat_y3     57  0.789      0.316     0.858      2.0
+1000 hlat_a3     57  0.789      0.404     0.892      2.0
+     hlat_y1     57  0.789      0.421     0.896      2.0
+     hlat_y2     57  0.860      0.386     0.878      2.0
+     hlat_y3     57  0.807      0.404     0.870      1.0
+5000 hlat_a3     19  0.842      0.421     0.892      2.0
+     hlat_y1     19  0.789      0.421     0.892      2.0
+     hlat_y2     19  0.842      0.316     0.875      1.0
+     hlat_y3     19  0.737      0.421     0.868      1.0
+
+hlat_y1: KEEP=False
+  small-N nulls pooled 0.219 (<= 0.1) | by bin <=15 0.12, 16-30 0.22, 31-60 0.37, 61-200 0.25 (each <= 0.2)
+  simulated nulls vs v8: +1.417 per run (must be <= 0)
+  ChIP N=25 (reported only): hit10_p5 -0.018 [-0.123,+0.088] | hit10_contains -0.088 [-0.175,-0.018]
+  ChIP N=50 (reported only): hit10_p5 -0.018 [-0.123,+0.088] | hit10_contains +0.035 [-0.035,+0.105]
+  ChIP N=100 (reported only): hit10_p5 +0.246 [+0.140,+0.351] | hit10_contains +0.088 [+0.018,+0.175]
+  ChIP N=250: hit10_p5 +0.035 [-0.053,+0.123] | hit10_contains +0.000 [-0.053,+0.053]
+  ChIP N=500: hit10_p5 +0.000 [+0.000,+0.000] | hit10_contains -0.018 [-0.088,+0.053]
+  ChIP N=1000: hit10_p5 +0.000 [-0.053,+0.053] | hit10_contains +0.018 [+0.000,+0.053]
+  ChIP N=5000: hit10_p5 -0.053 [-0.158,+0.000] | hit10_contains +0.000 [+0.000,+0.000]
+
+hlat_y3: KEEP=False
+  small-N nulls pooled 0.114 (<= 0.1) | by bin <=15 0.10, 16-30 0.07, 31-60 0.27, 61-200 0.10 (each <= 0.2)
+  simulated nulls vs v8: -0.050 per run (must be <= 0)
+  ChIP N=25 (reported only): hit10_p5 +0.035 [-0.053,+0.123] | hit10_contains -0.018 [-0.053,+0.000]
+  ChIP N=50 (reported only): hit10_p5 +0.000 [-0.070,+0.070] | hit10_contains +0.035 [+0.000,+0.088]
+  ChIP N=100 (reported only): hit10_p5 +0.105 [+0.000,+0.228] | hit10_contains +0.070 [-0.018,+0.158]
+  ChIP N=250: hit10_p5 -0.035 [-0.140,+0.053] | hit10_contains -0.070 [-0.175,+0.018]
+  ChIP N=500: hit10_p5 -0.035 [-0.123,+0.053] | hit10_contains -0.053 [-0.123,+0.018]
+  ChIP N=1000: hit10_p5 +0.018 [-0.053,+0.088] | hit10_contains +0.000 [-0.105,+0.105]
+  ChIP N=5000: hit10_p5 -0.105 [-0.316,+0.105] | hit10_contains +0.000 [+0.000,+0.000]
+
+hlat_y2: KEEP=False
+  small-N nulls pooled 0.019 (<= 0.1) | by bin <=15 0.00, 16-30 0.03, 31-60 0.03, 61-200 0.02 (each <= 0.2)
+  simulated nulls vs v8: +1.467 per run (must be <= 0)
+  ChIP N=25 (reported only): hit10_p5 +0.000 [-0.123,+0.123] | hit10_contains -0.105 [-0.193,-0.035]
+  ChIP N=50 (reported only): hit10_p5 +0.070 [-0.035,+0.175] | hit10_contains +0.000 [-0.070,+0.070]
+  ChIP N=100 (reported only): hit10_p5 +0.246 [+0.123,+0.386] | hit10_contains +0.105 [+0.000,+0.211]
+  ChIP N=250: hit10_p5 +0.018 [-0.105,+0.140] | hit10_contains +0.018 [-0.088,+0.123]
+  ChIP N=500: hit10_p5 +0.000 [-0.088,+0.088] | hit10_contains -0.018 [-0.088,+0.053]
+  ChIP N=1000: hit10_p5 +0.070 [+0.000,+0.158] | hit10_contains -0.018 [-0.123,+0.088]
+  ChIP N=5000: hit10_p5 +0.000 [-0.158,+0.158] | hit10_contains -0.105 [-0.263,+0.000]
+
+WINNER: none

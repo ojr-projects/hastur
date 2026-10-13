@@ -1,0 +1,84 @@
+######## hlat_p2
+1. small-N nulls (210 runs), false calls/run by size bin:
+tool    hlat_a3  hlat_p2
+bin                     
+<=15      2.950    0.017
+16-30     1.850    0.033
+31-60     1.367    0.167
+61-200    0.533    0.033
+   pooled {'hlat_a3': 1.719, 'hlat_p2': 0.048}
+   gate 1 (pooled <= 0.1, every bin <= 0.2): PASS
+2. real-genome nulls, false calls/run by kind:
+tool                hlat_a3  hlat_p2
+kind                                
+bceno_coding           0.40     0.00
+bceno_intergenic       0.90     0.15
+cjejuni_coding         0.65     0.10
+cjejuni_intergenic     0.65     0.15
+ecoli_coding           0.30     0.00
+ecoli_intergenic       0.40     0.00
+human_exch_n2000       0.70     0.05
+human_exch_n500        1.35     0.00
+human_gc_n2000         3.90     2.35
+human_gc_n500          3.00     0.50
+   gated kinds pooled: {'hlat_a3': 0.68, 'hlat_p2': 0.03} (n=100) -> gate 2 (<= 0.1): PASS
+3. simulated nulls, false calls/run:
+tool      hlat_a3  hlat_p2
+kind                      
+cpgshift      0.0      0.0
+iid           0.0      0.0
+markov        0.0      0.0
+   gate 3 (each kind <= v8 + 0.05): PASS
+4. ChIP dev (matrix readout), arm - v8:
+   N=25 (reported only): hit10_p5 +0.035 [-0.053,+0.123] | hit10_contains -0.018 [-0.053,+0.000] | best_sim +0.018 [+0.002,+0.039]
+   N=50 (reported only): hit10_p5 +0.000 [-0.070,+0.070] | hit10_contains +0.035 [+0.000,+0.088] | best_sim +0.002 [-0.009,+0.016]
+   N=100 (reported only): hit10_p5 +0.105 [+0.000,+0.228] | hit10_contains +0.070 [-0.018,+0.175] | best_sim +0.015 [-0.006,+0.041]
+   N=250: hit10_p5 -0.035 [-0.140,+0.053] | hit10_contains -0.070 [-0.175,+0.018] | best_sim -0.019 [-0.043,+0.002]
+   N=500: hit10_p5 -0.035 [-0.123,+0.053] | hit10_contains -0.053 [-0.140,+0.018] | best_sim -0.028 [-0.055,-0.005]
+   N=1000: hit10_p5 +0.018 [-0.053,+0.088] | hit10_contains +0.000 [-0.105,+0.105] | best_sim -0.022 [-0.047,-0.002]
+   N=5000: hit10_p5 -0.105 [-0.316,+0.105] | hit10_contains +0.000 [+0.000,+0.000] | best_sim -0.024 [-0.084,+0.021]
+   gate 4 (P5 and located >= -0.03 at every N >= 250): FAIL
+
+ARM KEEP = False
+######## hlat_p3
+1. small-N nulls (210 runs), false calls/run by size bin:
+tool    hlat_a3  hlat_p3
+bin                     
+<=15      2.950    0.000
+16-30     1.850    0.083
+31-60     1.367    0.067
+61-200    0.533    0.017
+   pooled {'hlat_a3': 1.719, 'hlat_p3': 0.038}
+   gate 1 (pooled <= 0.1, every bin <= 0.2): PASS
+2. real-genome nulls, false calls/run by kind:
+tool                hlat_a3  hlat_p3
+kind                                
+bceno_coding           0.40     0.00
+bceno_intergenic       0.90     0.00
+cjejuni_coding         0.65     0.05
+cjejuni_intergenic     0.65     0.05
+ecoli_coding           0.30     0.00
+ecoli_intergenic       0.40     0.00
+human_exch_n2000       0.70     0.10
+human_exch_n500        1.35     0.10
+human_gc_n2000         3.90     2.45
+human_gc_n500          3.00     2.05
+   gated kinds pooled: {'hlat_a3': 0.68, 'hlat_p3': 0.05} (n=100) -> gate 2 (<= 0.1): PASS
+3. simulated nulls, false calls/run:
+tool      hlat_a3  hlat_p3
+kind                      
+cpgshift      0.0     5.15
+iid           0.0     0.00
+markov        0.0     0.05
+   gate 3 (each kind <= v8 + 0.05): FAIL
+4. ChIP dev (matrix readout), arm - v8:
+   N=25 (reported only): hit10_p5 +0.000 [-0.123,+0.123] | hit10_contains -0.105 [-0.193,-0.035] | best_sim +0.006 [-0.021,+0.036]
+   N=50 (reported only): hit10_p5 +0.070 [-0.035,+0.175] | hit10_contains +0.000 [-0.070,+0.070] | best_sim -0.004 [-0.026,+0.016]
+   N=100 (reported only): hit10_p5 +0.246 [+0.123,+0.386] | hit10_contains +0.105 [+0.000,+0.211] | best_sim +0.020 [-0.002,+0.046]
+   N=250: hit10_p5 +0.018 [-0.105,+0.140] | hit10_contains +0.018 [-0.088,+0.123] | best_sim -0.014 [-0.036,+0.004]
+   N=500: hit10_p5 +0.000 [-0.088,+0.088] | hit10_contains -0.018 [-0.088,+0.053] | best_sim -0.016 [-0.038,+0.002]
+   N=1000: hit10_p5 +0.070 [+0.000,+0.158] | hit10_contains -0.018 [-0.123,+0.088] | best_sim -0.014 [-0.036,+0.004]
+   N=5000: hit10_p5 +0.000 [-0.158,+0.158] | hit10_contains -0.105 [-0.263,+0.000] | best_sim -0.017 [-0.058,+0.008]
+   gate 4 (P5 and located >= -0.03 at every N >= 250): FAIL
+
+ARM KEEP = False

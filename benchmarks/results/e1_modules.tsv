@@ -1,0 +1,202 @@
+module	safe	category	regulator	n_genes	gene_cov	n_regions	truth_tfs	included
+Sugar Diacid	Sugar_Diacid	Regulatory	CdaR	14	0.5	5		True
+Translation	Translation	Regulatory	DksA	53	1.0	19		True
+ygdT	ygdT	Technical		3	0.667	2		False
+OxyR	OxyR	Regulatory	OxyR	38	0.895	26	OxyR	True
+FlhDC-2	FlhDC-2	Regulatory	FlhDC	43	1.0	14		True
+Osmoprotectant	Osmoprotectant	Regulatory	RpoS+ppGpp+IHF+H-NS	4	0.75	1	IHF,H-NS	False
+Glutamine	Glutamine	Regulatory	NtrC	9	1.0	8	NtrC	True
+Sialic Acid	Sialic_Acid	Regulatory	Crp+NanR	13	1.0	7	CRP,NanR	True
+yqhI	yqhI	Technical		2	0.0	0		False
+ROS TALE Amp	ROS_TALE_Amp	Genomic		9	0.0	0		False
+Nucleotide Stress	Nucleotide_Stress	Biological		15	0.4	5		True
+Histidine	Histidine	Regulatory	His-tRNA+DksA	9	1.0	3		False
+UC-4	UC-4	Unknown		39	0.41	14		True
+RpoH	RpoH	Regulatory	RpoH	41	0.878	32		True
+FucR/AllR/AraC	FucR_AllR_AraC	Regulatory	FucR/AllR/AraC	20	1.0	10	AraC	True
+ldrC	ldrC	Technical		1	0.0	0		False
+Ferric Citrate	Ferric_Citrate	Regulatory	PdhR+HypT+Nac+Crp+Fur+FecI	7	1.0	3	PdhR,Nac,CRP,Fur	False
+Zinc-1	Zinc-1	Regulatory	Zur/ZntR/CueR	14	0.786	8		True
+Methionine	Methionine	Regulatory	MetJ	21	0.667	9	MetJ	True
+Sorbitol	Sorbitol	Regulatory	SrlR+GutM+Crp+H-NS	6	1.0	2	CRP,H-NS	False
+Glycerol	Glycerol	Regulatory	Crp+GlpR	11	1.0	5	CRP,GlpR	True
+Nucleoside	Nucleoside	Regulatory	Crp+CytR	11	1.0	12	CRP	True
+SoxS	SoxS	Regulatory	SoxS	117	0.615	71	SoxS	True
+thrA KO	thrA_KO	Genomic		5	0.8	3		False
+YjfJ	YjfJ	Regulatory	YjfJ	4	0.25	1		False
+Lrp	Lrp	Regulatory	Lrp	42	0.714	20	Lrp	True
+baeR KO	baeR_KO	Genomic		54	0.537	15		True
+ydaG	ydaG	Technical		4	0.25	1		False
+ldrA	ldrA	Technical		1	0.0	0		False
+Quorum Sensing	Quorum_Sensing	Regulatory	Crp+LsrR	10	0.9	2	CRP	False
+IS Elements-2	IS_Elements-2	Biological		49	0.143	7		True
+Nickel	Nickel	Regulatory	RpoN+NarL+NikR+Fnr	5	1.0	1	NarL,FNR	False
+CpxR	CpxR	Regulatory	CpxR	53	0.717	32	CpxR	True
+Curli-2	Curli-2	Regulatory	RpoS+FliZ+CpxR+CsgD+BtsR	5	0.8	3	CpxR,CsgD,BtsR	False
+Acid Shock RNA	Acid_Shock_RNA	Biological		3	0.667	2		False
+FucR/ExuR	FucR_ExuR	Regulatory	FucR/ExuR	14	0.857	7	ExuR	True
+cydB/appC KO	cydB_appC_KO	Genomic		11	0.545	5		True
+ymdG	ymdG	Technical		1	0.0	0		False
+EvgA	EvgA	Regulatory	EvgA	15	0.867	7	EvgA	True
+Xylose	Xylose	Regulatory	Crp+XylR	15	0.6	4	CRP	False
+IS1	IS1	Genomic		9	0.556	4		False
+pgi KO	pgi_KO	Genomic		4	1.0	4		False
+Biotin	Biotin	Regulatory	BirA	8	0.875	3		False
+N Reduction	N_Reduction	Regulatory	FlhDC+ModE+NarP+NarL+Fnr	24	1.0	4	NarP,NarL,FNR	False
+FDH-N/NRA	FDH-N_NRA	Regulatory	NarL+Fnr	15	0.867	7	NarL,FNR	True
+Resistance	Resistance	Biological		58	0.466	27		True
+PAL 10 Del	PAL_10_Del	Genomic		108	0.472	31		True
+Biofilm	Biofilm	Regulatory	RpoS+ppGpp+BluR+MarA	5	0.8	1	MarA	False
+Cytochrome c	Cytochrome_c	Regulatory	FlhDC+IHF+NsrR+NarL+NarP+Fis+Fnr	6	1.0	1	IHF,NsrR,NarL,NarP,Fis,FNR	False
+BasR	BasR	Regulatory	BasR	15	0.133	2	BasR	False
+Sulfoquinovose	Sulfoquinovose	Regulatory	CsqR	10	0.5	2		False
+RpoS	RpoS	Regulatory	RpoS	122	0.516	57		True
+lsrB KO	lsrB_KO	Genomic		8	0.625	3		False
+UC-1	UC-1	Unknown		27	0.333	12		True
+Fur-1	Fur-1	Regulatory	Fur	32	0.938	14	Fur	True
+ykgR	ykgR	Technical		1	1.0	1		False
+Sulfate	Sulfate	Regulatory	Cbl+CysB	17	0.824	6	CysB	True
+ypaB	ypaB	Technical		1	0.0	0		False
+Fur-2	Fur-2	Regulatory	Fur	44	0.864	23	Fur	True
+Magnesium	Magnesium	Regulatory	PhoP	21	0.714	14	PhoP	True
+Nitrate/Nitrite	Nitrate_Nitrite	Regulatory	NarL+Fnr	9	1.0	5	NarL,FNR	True
+glrR KO	glrR_KO	Genomic		7	0.714	4		False
+Fnr-1	Fnr-1	Regulatory	Fnr	46	0.826	26	FNR	True
+Pyrimidine	Pyrimidine	Regulatory	PurR/UTP	13	0.769	8	PurR	True
+Zinc-2	Zinc-2	Regulatory	ZraR	1	1.0	1	ZraR	False
+NRZ	NRZ	Regulatory	OmpR	6	0.5	2	OmpR	False
+nquinone ALE 3	nquinone_ALE_3	Genomic		26	0.769	19		True
+RpoE	RpoE	Regulatory	RpoE	13	0.923	9		True
+Cellulose	Cellulose	Biological		95	0.537	41		True
+Phosphate-1	Phosphate-1	Regulatory	PhoB	8	1.0	7	PhoB	True
+Salicylic Acid	Salicylic_Acid	Biological		9	0.778	3		False
+ymgI	ymgI	Technical		4	0.0	0		False
+Galactose	Galactose	Regulatory	RpoS+GalR+GalS+Crp	10	1.0	7	GalR,GalS,CRP	True
+trxC Del	trxC_Del	Genomic		3	0.333	1		False
+ArcA	ArcA	Regulatory	ArcA	81	0.679	47	ArcA	True
+yceO	yceO	Technical		1	1.0	1		False
+Potassium	Potassium	Regulatory	KdpE	5	0.6	1		False
+ROS TALE Del-1	ROS_TALE_Del-1	Genomic		14	0.571	5		True
+cyoB/kdpE/qseB KO	cyoB_kdpE_qseB_KO	Genomic		8	0.875	2		False
+Isc System	Isc_System	Regulatory	ryhB/IscR	11	0.818	4	IscR	False
+Thiamine-2	Thiamine-2	Biological		6	0.833	3		False
+crp KO-1	crp_KO-1	Genomic		24	0.625	15		True
+SSW SNPs	SSW_SNPs	Genomic		89	0.371	24		True
+yafF	yafF	Technical		1	0.0	0		False
+NtrC-2	NtrC-2	Regulatory	NtrC+RpoN	10	0.9	7	NtrC	True
+DNA Damage	DNA_Damage	Regulatory	LexA	18	0.944	15	LexA	True
+UC-3	UC-3	Unknown		51	0.843	33		True
+YieP	YieP	Regulatory	YieP	10	0.5	4		False
+Nitrogen	Nitrogen	Regulatory	Nac	32	0.688	15	Nac	True
+UC-6	UC-6	Unknown		11	0.636	8		True
+Leu/Val/Ile	Leu_Val_Ile	Regulatory	Lrp+IHF+Ile-tRNA+Leu-tRNA+Val-tRNA+ppGpp	11	0.909	6	Lrp,IHF	True
+NDH-1	NDH-1	Regulatory	NarL+ArcA+IHF+Fnr+Fis+ryhB	12	0.917	3	NarL,ArcA,IHF,FNR,Fis	False
+Crp-1	Crp-1	Regulatory	Crp	61	0.59	33	CRP	True
+yneP	yneP	Technical		6	0.0	0		False
+NtrC-1	NtrC-1	Regulatory	RpoN+RpoS+NtrC	18	1.0	8	NtrC	True
+Ribose	Ribose	Regulatory	dsrA+Crp+RbsR	5	1.0	1	CRP	False
+Dipeptide	Dipeptide	Regulatory	gcvB+IHF+Fnr	8	1.0	2	IHF,FNR	False
+Curli-1	Curli-1	Regulatory	RpoS+FliZ+CpxR+CsgD+BtsR	6	1.0	3	CpxR,CsgD,BtsR	False
+ymiB	ymiB	Technical		1	0.0	0		False
+yjjZ	yjjZ	Technical		2	1.0	2		False
+Molybdenum	Molybdenum	Regulatory	Crp+FliA+ModE	5	0.8	2	CRP	False
+e14 Del	e14_Del	Genomic		14	0.143	2		False
+Thr/Ser-1	Thr_Ser-1	Regulatory	TdcA+TdcR+IHF+Fnr+Crp	16	0.938	8	IHF,FNR,CRP	True
+Tryptophan	Tryptophan	Regulatory	TrpR+Trp-tRNA	8	0.875	4	TrpR	False
+FHL	FHL	Regulatory	RpoN+NsrR+ModE+IHF+FhlA	7	1.0	2	NsrR,IHF	False
+Glycine	Glycine	Regulatory	PurR+Fnr+ppGpp+Crp+Lrp+GcvA	5	0.8	2	PurR,FNR,CRP,Lrp,GcvA	False
+BW25113	BW25113	Genomic		26	0.846	17		True
+ypjJ	ypjJ	Technical		7	0.0	0		False
+PaaX	PaaX	Regulatory	Crp+IHF+PaaX+SlyA	9	1.0	2	CRP,IHF,SlyA	False
+Flagella	Flagella	Biological		4	1.0	2		False
+SCFA	SCFA	Regulatory	RpoN+AtoC+IHF	4	1.0	1	IHF	False
+YgeV	YgeV	Regulatory	YgeV	13	0.385	4		False
+pts ALE	pts_ALE	Genomic		37	0.595	20		True
+FDH-O	FDH-O	Regulatory	SdhX	7	0.286	2		False
+GlcNAc	GlcNAc	Regulatory	NagC+Crp	17	1.0	12	NagC,CRP	True
+YgbI	YgbI	Regulatory	YgbI	10	0.5	3		False
+Lysine/T2SS	Lysine_T2SS	Regulatory	ArgP	27	0.778	15	ArgP	True
+Fnr-3	Fnr-3	Regulatory	Fnr	33	0.545	19	FNR	True
+ythA	ythA	Technical		3	0.0	0		False
+entC/ubiC KO-1	entC_ubiC_KO-1	Genomic		6	0.333	2		False
+yoaI	yoaI	Technical		1	0.0	0		False
+Gluconate	Gluconate	Regulatory	GntR+Crp	12	0.917	8	GntR,CRP	True
+UC-9	UC-9	Unknown		10	0.7	8		True
+Copper	Copper	Regulatory	CusR/CueR/HprR	11	0.818	4		False
+Thr/Ser-2	Thr_Ser-2	Regulatory	Fnr+Crp+IHF+TdcA+TdcR	5	1.0	2	FNR,CRP,IHF	False
+Membrane	Membrane	Biological		33	0.364	9		True
+Thiamine-1	Thiamine-1	Regulatory	Thiamine diphosphate	9	1.0	3		False
+Cold Shock	Cold_Shock	Biological		15	0.4	6		True
+FliA	FliA	Regulatory	FliA	37	1.0	22		True
+Pyruvate-1	Pyruvate-1	Regulatory	BtsR	6	0.5	3	BtsR	False
+ldrD	ldrD	Technical		4	0.25	1		False
+efeU Activation	efeU_Activation	Genomic		9	0.778	5		True
+rcsB KO	rcsB_KO	Genomic		8	1.0	8		True
+malE OE	malE_OE	Genomic		3	0.667	2		False
+Crp-2	Crp-2	Regulatory	Crp	21	0.714	8	CRP	True
+Cysteine-1	Cysteine-1	Regulatory	CysB	32	0.875	15	CysB	True
+Pyruvate-2	Pyruvate-2	Regulatory	PyrR	1	1.0	1		False
+Phosphate-2	Phosphate-2	Regulatory	PhoB	20	1.0	8	PhoB	True
+Leucine	Leucine	Regulatory	LeuO+Leu-tRNA+ppGpp	5	1.0	2	LeuO	False
+Capsule	Capsule	Regulatory	RcsAB	38	0.368	9		True
+ytiC	ytiC	Technical		2	0.5	1		False
+ROS TALE Del-2	ROS_TALE_Del-2	Genomic		9	0.667	3		False
+UC-5	UC-5	Unknown		15	0.6	9		True
+FlhDC-1	FlhDC-1	Regulatory	FlhDC	32	0.969	14		True
+Putrescine	Putrescine	Regulatory	RpoS+ArcA+PuuR	8	1.0	3	ArcA,PuuR	False
+ppGpp	ppGpp	Regulatory	ppGpp	70	0.571	33		True
+Glycolate	Glycolate	Regulatory	IHF+ArcA+PdhR+GlcC	6	1.0	1	IHF,ArcA,PdhR	False
+PAL 26 Del	PAL_26_Del	Genomic		43	0.326	13		True
+LPS	LPS	Biological		43	0.442	13		True
+Arginine	Arginine	Regulatory	ArgR	24	0.917	14	ArgR	True
+Nickel/Cobalt	Nickel_Cobalt	Regulatory	RcnR	2	1.0	1		False
+IS5	IS5	Technical		9	0.222	1		False
+NtrC-3	NtrC-3	Regulatory	NtrC+RpoN	20	0.8	7	NtrC	True
+arcA/luxS KO	arcA_luxS_KO	Genomic		2	1.0	2		False
+sdh KO	sdh_KO	Genomic		5	1.0	3		False
+YmfT	YmfT	Regulatory	YmfT	15	0.133	3		False
+Fnr-2	Fnr-2	Regulatory	Fnr	62	0.565	31	FNR	True
+Microaerobic	Microaerobic	Regulatory	RpoS+Fis+NarP+NarL+AppY+YdeO+ArcA+IscR	6	1.0	1	Fis,NarP,NarL,ArcA,IscR	False
+Cysteine-2	Cysteine-2	Regulatory	CysB	9	1.0	4	CysB	False
+ydfW	ydfW	Technical		3	0.667	2		False
+YcjW	YcjW	Regulatory	YcjW	17	0.118	2		False
+PAL Amp	PAL_Amp	Genomic		88	0.67	31		True
+Propionate	Propionate	Regulatory	PrpR+RpoN+Cra+Crp	4	1.0	1	Cra,CRP	False
+CP4-44	CP4-44	Biological		4	0.25	1		False
+minicoli KOs	minicoli_KOs	Genomic		115	0.443	41		True
+GadXW	GadXW	Regulatory	GadX+GadW	19	0.895	11	GadX,GadW	True
+Rhamnose	Rhamnose	Regulatory	Crp+RhaS	8	0.875	4	CRP,RhaS	False
+UC-2	UC-2	Unknown		96	0.604	58		True
+ydfB	ydfB	Technical		1	1.0	1		False
+NrdR	NrdR	Regulatory	NrdR	7	1.0	3		False
+Purine	Purine	Regulatory	PurR+ppGpp	22	0.818	14	PurR	True
+cyoB/ndh/nuoB KO-1	cyoB_ndh_nuoB_KO-1	Genomic		3	1.0	3		False
+Fimbriae	Fimbriae	Regulatory	QseB+IHF+Lrp+H-NS	8	1.0	2	IHF,Lrp,H-NS	False
+IS Elements-1	IS_Elements-1	Biological		24	0.0	0		False
+Cra	Cra	Regulatory	Cra	17	0.824	11	Cra	True
+Hot TALE 16	Hot_TALE_16	Genomic		17	0.882	10		True
+Suf System	Suf_System	Regulatory	NsrR+IHF+IscR+OxyR+Fur+ppGpp	6	1.0	1	NsrR,IHF,IscR,OxyR,Fur	False
+PlaR	PlaR	Regulatory	PlaR+RpoE+Crp+IHF	10	1.0	1	CRP,IHF	False
+NO Stress	NO_Stress	Regulatory	NsrR/NarP	11	1.0	9	NsrR,NarP	True
+Maltose	Maltose	Regulatory	MalT	9	1.0	4	MalT	False
+Tyr/Trp/Phe	Tyr_Trp_Phe	Regulatory	TyrR/TrpR/Trp-tRNA	12	0.917	8	TyrR,TrpR	True
+GadX	GadX	Regulatory	RpoS+GadX	9	0.889	7	GadX	True
+Fatty Acid	Fatty_Acid	Regulatory	FadR	7	1.0	5	FadR	True
+DhaR	DhaR	Regulatory	DhaR	13	1.0	7		True
+pts KO	pts_KO	Genomic		13	0.923	6		True
+gcvB	gcvB	Regulatory	gcvB	76	0.105	8		True
+Glutarate	Glutarate	Regulatory	RpoS+H-NS+Crp+Lrp+GlaR+ppGpp	5	1.0	2	H-NS,CRP,Lrp,GlaR	False
+entC/ubiC KO-2	entC_ubiC_KO-2	Genomic		5	0.4	2		False
+Oxidoreductase	Oxidoreductase	Biological		5	0.8	2		False
+UC-7	UC-7	Unknown		32	0.562	15		True
+Efflux Pump	Efflux_Pump	Biological		2	1.0	1		False
+Tryptophanase	Tryptophanase	Regulatory	Crp+TorR+Nac+L-tryptophan	2	0.0	0	CRP,TorR,Nac	False
+crp KO-2	crp_KO-2	Genomic		6	1.0	3		False
+cyoB/ndh/nuoB KO-2	cyoB_ndh_nuoB_KO-2	Genomic		9	0.667	6		True
+tpiA KO	tpiA_KO	Genomic		10	0.9	8		True
+Phage Shock	Phage_Shock	Regulatory	RpoN+IHF+PspF	6	1.0	3	IHF	False
+Glyoxylate	Glyoxylate	Regulatory	Crp+ArcA+ppGpp+Cra+IclR+IHF	3	1.0	1	CRP,ArcA,Cra,IHF	False
+CCK-PGI Del	CCK-PGI_Del	Genomic		15	0.133	2		False
+Acetate	Acetate	Biological		7	0.714	4		False
+Ile/Val	Ile_Val	Biological		4	0.5	1		False
+UC-8	UC-8	Unknown		9	0.889	8		True

@@ -1,0 +1,60 @@
+                      truth  p95_other_tf  p95_shuffled   tau  evaluable
+module          tf                                                      
+ArcA            ArcA   0.59          0.53          0.59  0.59      False
+Arginine        ArgR   1.00          0.82          0.80  0.82       True
+CpxR            CpxR   0.69          0.25          0.32  0.32       True
+Cra             Cra    1.00          0.25          0.12  0.25       True
+Crp-1           CRP    0.86          0.30          0.20  0.30       True
+Crp-2           CRP    1.00          0.33          0.50  0.50       True
+Cysteine-1      CysB   0.80          0.60          0.40  0.60       True
+DNA_Damage      LexA   0.93          0.55          0.47  0.55       True
+EvgA            EvgA   1.00          0.17          0.34  0.34       True
+FDH-N_NRA       NarL   0.29          0.43          0.29  0.43      False
+                FNR    1.00          0.67          0.34  0.67       True
+Fatty_Acid      FadR   1.00          0.20          0.41  0.41       True
+Fnr-1           FNR    0.69          0.38          0.25  0.38       True
+Fnr-2           FNR    0.69          0.27          0.20  0.27       True
+Fnr-3           FNR    0.79          0.43          0.29  0.43       True
+Fur-1           Fur    0.91          0.59          0.65  0.65       True
+Fur-2           Fur    0.82          0.43          0.59  0.59       True
+GadX            GadX   0.50          0.50          0.50  0.50      False
+GadXW           GadX   0.50          0.67          0.67  0.67      False
+                GadW   1.00          0.60          0.60  0.60       True
+Galactose       GalR   1.00          0.59          0.26  0.59       True
+                GalS   1.00          0.59          0.26  0.59       True
+                CRP    0.75          0.25          0.25  0.25       True
+GlcNAc          NagC   1.00          0.33          0.50  0.50       True
+                CRP    1.00          0.25          0.25  0.25       True
+Gluconate       GntR   1.00          0.57          0.50  0.57       True
+                CRP    0.75          0.57          0.50  0.57       True
+Glutamine       NtrC   1.00          0.31          0.25  0.31       True
+Lrp             Lrp    0.27          0.30          0.37  0.37      False
+Magnesium       PhoP   1.00          0.22          0.34  0.34       True
+Methionine      MetJ   0.17          0.33          0.18  0.33      False
+NO_Stress       NsrR   0.80          0.86          0.81  0.86      False
+                NarP   0.00          0.50          0.26  0.50      False
+Nitrate_Nitrite NarL   0.40          0.46          0.40  0.46      False
+                FNR    0.75          0.50          0.25  0.50       True
+Nitrogen        Nac    0.57          0.45          0.36  0.45      False
+NtrC-1          NtrC   1.00          0.25          0.25  0.25       True
+NtrC-2          NtrC   1.00          0.17          0.52  0.52       True
+NtrC-3          NtrC   1.00          0.20          0.41  0.41       True
+Nucleoside      CRP    1.00          0.50          0.51  0.51       True
+OxyR            OxyR   0.64          0.45          0.37  0.45       True
+Phosphate-1     PhoB   1.00          0.50          0.26  0.50       True
+Phosphate-2     PhoB   0.80          0.80          0.80  0.80      False
+Purine          PurR   1.00          0.44          0.33  0.44       True
+Pyrimidine      PurR   1.00          0.50          0.20  0.50       True
+SoxS            SoxS   0.32          0.24          0.24  0.24      False
+Thr_Ser-1       FNR    1.00          0.60          0.60  0.60       True
+                CRP    0.80          0.47          0.41  0.47       True
+Tyr_Trp_Phe     TyrR   1.00          0.40          0.60  0.60       True
+
+site recovery quantiles by kind:
+           0.50   0.90   0.95   0.99
+kind                                
+other_tf  0.167  0.429  0.500  0.800
+shuffled  0.182  0.483  0.547  0.721
+truth     0.909  1.000  1.000  1.000
+
+49 pairs tested (>= 4 site-holding regions); 37 evaluable pairs; 32 evaluable modules: Arginine CpxR Cra Crp-1 Crp-2 Cysteine-1 DNA_Damage EvgA FDH-N_NRA Fatty_Acid Fnr-1 Fnr-2 Fnr-3 Fur-1 Fur-2 GadXW Galactose GlcNAc Gluconate Glutamine Magnesium Nitrate_Nitrite NtrC-1 NtrC-2 NtrC-3 Nucleoside OxyR Phosphate-1 Purine Pyrimidine Thr_Ser-1 Tyr_Trp_Phe

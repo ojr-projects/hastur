@@ -1,0 +1,114 @@
+######## hlat_p7
+1. small-N nulls (210 runs), false calls/run by size bin:
+tool    hlat_a3  hlat_p7
+bin                     
+<=15      2.950    0.017
+16-30     1.850    0.017
+31-60     1.367    0.167
+61-200    0.533    0.017
+   pooled {'hlat_a3': 1.719, 'hlat_p7': 0.038}
+   gate 1 (pooled <= 0.1, every bin <= 0.2): PASS
+2. real-genome nulls, false calls/run by kind:
+tool                hlat_a3  hlat_p7
+kind                                
+bceno_coding           0.40     0.00
+bceno_intergenic       0.90     0.15
+cjejuni_coding         0.65     0.10
+cjejuni_intergenic     0.65     0.10
+ecoli_coding           0.30     0.00
+ecoli_intergenic       0.40     0.00
+human_exch_n2000       0.70     0.05
+human_exch_n500        1.35     0.00
+human_gc_n2000         3.90     3.55
+human_gc_n500          3.00     2.80
+   gated kinds pooled: {'hlat_a3': 0.68, 'hlat_p7': 0.03} (n=100) -> gate 2 (<= 0.1): PASS
+3. simulated nulls, false calls/run:
+tool      hlat_a3  hlat_p7
+kind                      
+cpgshift      0.0     0.05
+iid           0.0     0.00
+markov        0.0     0.00
+   gate 3 (each kind <= v8 + 0.05): PASS
+4. ChIP dev (matrix readout), arm - v8:
+   N=25 (reported only): hit10_p5 +0.000 [+0.000,+0.000] | hit10_contains +0.000 [+0.000,+0.000] | best_sim +0.000 [+0.000,+0.000]
+   N=50 (reported only): hit10_p5 +0.000 [+0.000,+0.000] | hit10_contains +0.000 [+0.000,+0.000] | best_sim +0.000 [+0.000,+0.000]
+   N=100 (reported only): hit10_p5 +0.000 [+0.000,+0.000] | hit10_contains +0.000 [+0.000,+0.000] | best_sim +0.000 [+0.000,+0.000]
+   N=250: hit10_p5 +0.000 [+0.000,+0.000] | hit10_contains +0.000 [+0.000,+0.000] | best_sim +0.000 [+0.000,+0.000]
+   N=500: hit10_p5 +0.000 [+0.000,+0.000] | hit10_contains +0.000 [+0.000,+0.000] | best_sim +0.000 [+0.000,+0.000]
+   N=1000: hit10_p5 +0.000 [+0.000,+0.000] | hit10_contains +0.000 [+0.000,+0.000] | best_sim +0.000 [+0.000,+0.000]
+   N=5000: hit10_p5 +0.000 [+0.000,+0.000] | hit10_contains +0.000 [+0.000,+0.000] | best_sim +0.000 [+0.000,+0.000]
+   gate 4 (P5 and located >= -0.03 at every N >= 250): PASS
+
+ARM KEEP = True
+######## hlat_f2
+1. small-N nulls (210 runs), false calls/run by size bin:
+tool    hlat_a3  hlat_f2
+bin                     
+<=15      2.950    0.017
+16-30     1.850    0.017
+31-60     1.367    0.167
+61-200    0.533    0.017
+   pooled {'hlat_a3': 1.719, 'hlat_f2': 0.038}
+   gate 1 (pooled <= 0.1, every bin <= 0.2): PASS
+2. real-genome nulls, false calls/run by kind:
+tool                hlat_a3  hlat_f2
+kind                                
+bceno_coding           0.40     0.00
+bceno_intergenic       0.90     0.15
+cjejuni_coding         0.65     0.10
+cjejuni_intergenic     0.65     0.10
+ecoli_coding           0.30     0.00
+ecoli_intergenic       0.40     0.00
+human_exch_n2000       0.70     0.05
+human_exch_n500        1.35     0.00
+human_gc_n2000         3.90     3.55
+human_gc_n500          3.00     2.80
+   gated kinds pooled: {'hlat_a3': 0.68, 'hlat_f2': 0.03} (n=100) -> gate 2 (<= 0.1): PASS
+3. simulated nulls, false calls/run:
+tool      hlat_a3  hlat_f2
+kind                      
+cpgshift      0.0     0.05
+iid           0.0     0.00
+markov        0.0     0.00
+   gate 3 (each kind <= v8 + 0.05): PASS
+4. ChIP dev (matrix readout), arm - v8:
+   N=25 (reported only): hit10_p5 +0.000 [-0.070,+0.070] | hit10_contains -0.035 [-0.088,+0.000] | best_sim +0.003 [-0.001,+0.007]
+   N=50 (reported only): hit10_p5 +0.035 [-0.035,+0.105] | hit10_contains +0.035 [+0.000,+0.088] | best_sim +0.006 [+0.002,+0.010]
+   N=100 (reported only): hit10_p5 +0.158 [+0.070,+0.263] | hit10_contains +0.088 [+0.018,+0.175] | best_sim +0.006 [+0.002,+0.010]
+   N=250: hit10_p5 +0.053 [+0.000,+0.123] | hit10_contains -0.018 [-0.088,+0.053] | best_sim +0.008 [+0.003,+0.013]
+   N=500: hit10_p5 +0.000 [+0.000,+0.000] | hit10_contains +0.053 [-0.018,+0.140] | best_sim +0.007 [+0.002,+0.012]
+   N=1000: hit10_p5 +0.035 [+0.000,+0.088] | hit10_contains +0.018 [-0.035,+0.088] | best_sim +0.007 [+0.003,+0.012]
+   N=5000: hit10_p5 +0.000 [+0.000,+0.000] | hit10_contains +0.000 [+0.000,+0.000] | best_sim +0.010 [+0.002,+0.019]
+   gate 4 (P5 and located >= -0.03 at every N >= 250): PASS
+
+ARM KEEP = True
+              n_sig  sig_p5  sig_contains  sig_sim85
+n    tool                                           
+25   hlat_a3  2.105   0.316         0.140      0.263
+     hlat_f2  0.228   0.018         0.018      0.018
+     hlat_p5  0.105   0.035         0.018      0.018
+     hlat_p7  0.228   0.035         0.018      0.018
+50   hlat_a3  2.456   0.526         0.175      0.579
+     hlat_f2  0.719   0.368         0.175      0.404
+     hlat_p5  0.404   0.246         0.105      0.246
+     hlat_p7  0.719   0.386         0.123      0.404
+100  hlat_a3  2.018   0.491         0.211      0.614
+     hlat_f2  1.175   0.596         0.298      0.561
+     hlat_p5  0.789   0.439         0.211      0.474
+     hlat_p7  1.175   0.491         0.211      0.561
+250  hlat_a3  2.404   0.754         0.351      0.789
+     hlat_f2  1.596   0.754         0.316      0.719
+     hlat_p5  1.088   0.614         0.281      0.667
+     hlat_p7  1.596   0.719         0.316      0.737
+500  hlat_a3  2.509   0.825         0.368      0.754
+     hlat_f2  2.193   0.825         0.421      0.807
+     hlat_p5  1.456   0.754         0.333      0.684
+     hlat_p7  2.193   0.825         0.368      0.754
+1000 hlat_a3  2.158   0.789         0.404      0.825
+     hlat_f2  2.123   0.807         0.421      0.825
+     hlat_p5  1.632   0.772         0.404      0.789
+     hlat_p7  2.123   0.772         0.404      0.807
+5000 hlat_a3  1.842   0.842         0.421      0.842
+     hlat_f2  1.842   0.842         0.421      0.842
+     hlat_p5  1.526   0.842         0.421      0.842
+     hlat_p7  1.842   0.842         0.421      0.842

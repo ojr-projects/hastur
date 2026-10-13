@@ -1,0 +1,10 @@
+fresh small-N panel (tuple seed, 210 runs), frozen F2: native false calls per run
+         mean  size
+bin                
+<=15    0.050    60
+16-30   0.050    60
+31-60   0.167    30
+61-200  0.000    60
+pooled 0.052
+upnull_dev3: mean share of fg sequences also in the same cell: 0.021 over 210 cells
+upnull_conf4: mean share of fg sequences also in the same cell: 0.020 over 210 cells

@@ -1,0 +1,8 @@
+fresh small-N panel (210 runs), frozen F2: native false calls per run
+         mean  size
+bin                
+<=15    0.017    60
+16-30   0.017    60
+31-60   0.167    30
+61-200  0.017    60
+pooled 0.038 | by genome {'cglut': 0.014, 'pputida': 0.057, 'saureus': 0.043}

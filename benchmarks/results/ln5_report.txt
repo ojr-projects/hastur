@@ -1,0 +1,64 @@
+== ChIP dev (matrix readout)
+                 units  best_sim  p5_10  located10
+n    tool                                         
+250  hlat_a3        57     0.877  0.754      0.351
+     hlat_l1        57     0.884  0.719      0.316
+     hlat_l12       57     0.893  0.842      0.316
+     hlat_l2        57     0.885  0.807      0.333
+     streme_all     57     0.897  0.825      0.351
+500  hlat_a3        57     0.885  0.825      0.368
+     hlat_l1        57     0.891  0.807      0.421
+     hlat_l12       57     0.899  0.825      0.404
+     hlat_l2        57     0.892  0.825      0.421
+     streme_all     57     0.905  0.842      0.474
+1000 hlat_a3        57     0.892  0.789      0.404
+     hlat_l1        57     0.897  0.807      0.404
+     hlat_l12       57     0.905  0.807      0.404
+     hlat_l2        57     0.899  0.825      0.421
+     streme_all     57     0.907  0.772      0.404
+5000 hlat_a3        19     0.892  0.842      0.421
+     hlat_l1        19     0.897  0.842      0.474
+     hlat_l12       19     0.906  0.842      0.421
+     hlat_l2        19     0.902  0.842      0.421
+== SELEX dev
+          units  best_sim  p5_10  located10
+tool                                       
+hlat_a3     212     0.869  0.642      0.217
+hlat_l1     212     0.866  0.608      0.203
+hlat_l12    212     0.868  0.651      0.231
+hlat_l2     212     0.869  0.670      0.241
+== motif-free: significant calls per run
+tool      hlat_a3  hlat_l1  hlat_l12  hlat_l2
+kind                                         
+cpgshift     0.05     0.05      0.05     0.05
+iid          0.05     0.05      0.05     0.05
+markov       0.10     0.10      0.10     0.10
+
+hlat_l1: KEEP=False
+  ChIP best_sim (pooled, n=190): +0.0062 [+0.0042,+0.0083]
+  ChIP N=250: hit10_p5 -0.035 [-0.123,+0.053] | hit10_contains -0.035 [-0.105,+0.035] | best_sim +0.007 [+0.003,+0.012] | best_sim vs STREME(all) -0.012
+  ChIP N=500: hit10_p5 -0.018 [-0.053,+0.000] | hit10_contains +0.053 [+0.000,+0.123] | best_sim +0.006 [+0.003,+0.009] | best_sim vs STREME(all) -0.013
+  ChIP N=1000: hit10_p5 +0.018 [+0.000,+0.053] | hit10_contains +0.000 [+0.000,+0.000] | best_sim +0.005 [+0.002,+0.009] | best_sim vs STREME(all) -0.009
+  ChIP N=5000: hit10_p5 +0.000 [+0.000,+0.000] | hit10_contains +0.053 [+0.000,+0.158] | best_sim +0.006 [+0.001,+0.010]
+  SELEX best_sim -0.0025 [-0.0063,+0.0014] | P5 -0.033 [-0.066,-0.005]
+  null: significant calls identical to v8 in every run: True
+
+hlat_l2: KEEP=True
+  ChIP best_sim (pooled, n=190): +0.0076 [+0.0051,+0.0103]
+  ChIP N=250: hit10_p5 +0.053 [+0.000,+0.123] | hit10_contains -0.018 [-0.088,+0.053] | best_sim +0.008 [+0.003,+0.013] | best_sim vs STREME(all) -0.012
+  ChIP N=500: hit10_p5 +0.000 [+0.000,+0.000] | hit10_contains +0.053 [-0.018,+0.140] | best_sim +0.007 [+0.002,+0.012] | best_sim vs STREME(all) -0.012
+  ChIP N=1000: hit10_p5 +0.035 [+0.000,+0.088] | hit10_contains +0.018 [-0.035,+0.088] | best_sim +0.007 [+0.003,+0.012] | best_sim vs STREME(all) -0.008
+  ChIP N=5000: hit10_p5 +0.000 [+0.000,+0.000] | hit10_contains +0.000 [+0.000,+0.000] | best_sim +0.010 [+0.002,+0.019]
+  SELEX best_sim +0.0000 [-0.0049,+0.0046] | P5 +0.028 [-0.009,+0.066]
+  null: significant calls identical to v8 in every run: True
+
+hlat_l12: KEEP=False
+  ChIP best_sim (pooled, n=190): +0.0141 [+0.0111,+0.0172]
+  ChIP N=250: hit10_p5 +0.088 [+0.018,+0.158] | hit10_contains -0.035 [-0.140,+0.070] | best_sim +0.016 [+0.010,+0.022] | best_sim vs STREME(all) -0.004
+  ChIP N=500: hit10_p5 +0.000 [+0.000,+0.000] | hit10_contains +0.035 [-0.053,+0.123] | best_sim +0.014 [+0.008,+0.020] | best_sim vs STREME(all) -0.006
+  ChIP N=1000: hit10_p5 +0.018 [-0.035,+0.070] | hit10_contains +0.000 [+0.000,+0.000] | best_sim +0.013 [+0.008,+0.018] | best_sim vs STREME(all) -0.002
+  ChIP N=5000: hit10_p5 +0.000 [+0.000,+0.000] | hit10_contains +0.000 [+0.000,+0.000] | best_sim +0.014 [+0.006,+0.023]
+  SELEX best_sim -0.0004 [-0.0052,+0.0041] | P5 +0.009 [-0.028,+0.047]
+  null: significant calls identical to v8 in every run: True
+
+WINNER: hlat_l2

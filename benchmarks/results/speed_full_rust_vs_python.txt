@@ -1,0 +1,21 @@
+unit                     n_fg   n_bg |    py_2thr   py_24thr |   rust_1t  rust_24t | rust 24t breakdown (count/perm/repr)
+saureus_n20__r1            20   2173 |      14.7s      12.0s |     7.31s     1.04s | 0.04/0.26/0.68
+CRP                       206   1736 |      14.7s      11.0s |    12.21s     1.76s | 0.04/0.30/1.36
+CTCF__n250__r0            250   2500 |      10.7s       8.8s |     5.51s     0.83s | 0.04/0.27/0.48
+CTCF__n1000__r0          1000  10000 |      20.2s      12.1s |    14.76s     1.66s | 0.13/0.44/1.02
+CTCF                     5000  50000 |      83.8s      40.1s |    70.03s     8.21s | 0.93/1.40/5.74
+
+Full pipeline (detection + 20 permutations + representation), outputs byte-identical to proto/hlat.py frozen F2 (TSV,
+MEME; thresholds equal to ~1e-9) on 8 validation units (rust/validate_full.sh). Machine: Ryzen 9 7900X, 12 cores / 24
+threads, WSL2, idle. Representation dominates (held-out z of frame vs EM scores all four sets, incl. two synthetic
+Markov copies). STREME (permissive, single-threaded, box logs): ~124 s (250 peaks), ~556 s (1,000), ~2,150 s (5k),
+~185 s (D1 regulon units).
+
+Final profiling pass (2026-10-12), outputs still byte-identical (rust/validate_full.sh on 5 units):
+- window scoring loop interchanged (column-outer, window-inner; same per-window summation order), windows bounded by
+  each row's real length (padding windows are exactly -inf), EM skips exps whose posterior is provably < 1e-6.
+- a select-chain lookup was tried and rejected (5k scoring 28 s -> 43 s; byte-indexed table kept).
+24 threads, best of 3: 20 regions 0.83 s; CRP regulon 1.51 s; 250 peaks 0.77 s; 1,000 peaks 1.58 s; 5,000 + 50k bg 6.95 s.
+Single-thread profile (CRP / 5k): representation 7.5 / 45 s, of which window scoring (held-out z, site refit, EM) is
+~55 / ~75%; EM exp/posterior ~37% / 9%; permutations 2.2 / 14.5 s; counting 0.4 / 7.2 s.
+At identical outputs this is close to the floor: scoring ~2.5 cycles per window-column, counting ~2 cycles per increment.

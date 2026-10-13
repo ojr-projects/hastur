@@ -1,0 +1,37 @@
+units per tool: {'hlat_f2': 374, 'hlat_p7': 374, 'homer': 374, 'streme': 374, 'streme_all': 374}; null runs: {'hlat_f2': 340, 'hlat_p7': 340, 'homer': 340, 'streme': 340, 'streme_all': 340}
+STREME S-mode units (no hold-out; amendment 1): {'streme': 286, 'streme_all': 286}
+evaluable regulons: 21
+
+== 1. native operating points
+hlat_f2  sensitivity 0.476 [0.286,0.714] (10/21) | false calls/null run 0.079 (runs with any: 0.065) | native calls on 34 regulons 24 (non-evaluable: 4) | est. screen FDR 0.112 | mismatched-truth chance 0.000
+         missed: CpxR CysB FadR Fis MarA NagC NsrR PhoP RcsB-BglJ Rob ZraR
+streme   sensitivity 0.714 [0.524,0.905] (15/21) | false calls/null run 7.647 (runs with any: 0.765) | native calls on 34 regulons 261 (non-evaluable: 90) | est. screen FDR 0.996 | mismatched-truth chance 0.190
+         missed: CpxR CysB FNR Fis MarA ZraR
+
+== 2. frontier (sensitivity on evaluable regulons vs false calls per null run)
+hlat_f2    | @0.05: 0.476 [0.286,0.667] (t=1.65) | @0.1: 0.571 [0.333,0.762] (t=1.10) | @0.5: 0.619 [0.429,0.810] (t=0.17)
+streme_all | @0.05: 0.476 [0.286,0.667] (t=12.64) | @0.1: 0.476 [0.286,0.667] (t=11.66) | @0.5: 0.476 [0.286,0.667] (t=10.00)
+homer      | @0.05: 0.524 [0.333,0.714] (t=9.95) | @0.1: 0.524 [0.333,0.714] (t=9.60) | @0.5: 0.619 [0.429,0.810] (t=8.26)
+HASTUR - STREME sensitivity @ 0.05 false calls/run: +0.000 [-0.238,+0.238]
+HASTUR - STREME sensitivity @ 0.1 false calls/run: +0.095 [-0.143,+0.333]
+HASTUR - STREME sensitivity @ 0.5 false calls/run: +0.143 [-0.095,+0.381]
+
+== 3. cost (runtime s over all units)
+                sum  median    max
+tool                              
+hlat_f2      5998.1    14.7   32.3
+hlat_p7      7585.6    18.8   42.4
+homer       41090.0   109.4  211.7
+streme      27528.5    75.0   93.4
+streme_all  64179.8   184.6  261.0
+
+== 4. secondary (descriptive)
+hlat_f2  native sensitivity: sites <= 16 bp 0.400 (n=5) | >= 17 bp 0.500 (n=16)
+streme   native sensitivity: sites <= 16 bp 0.400 (n=5) | >= 17 bp 0.812 (n=16)
+hlat_f2    @0.1 sensitivity: <= 16 bp 0.600 | >= 17 bp 0.562
+streme_all @0.1 sensitivity: <= 16 bp 0.400 | >= 17 bp 0.500
+homer      @0.1 sensitivity: <= 16 bp 0.600 | >= 17 bp 0.500
+hlat_f2    best hitting call per regulon: sites 0.713, P5 0.706, PWM sim 0.742 (n=17)
+streme     best hitting call per regulon: sites 0.633, P5 0.529, PWM sim 0.737 (n=17)
+streme_all best hitting call per regulon: sites 0.639, P5 0.611, PWM sim 0.700 (n=18)
+homer      best hitting call per regulon: sites 0.605, P5 0.176, PWM sim 0.693 (n=17)

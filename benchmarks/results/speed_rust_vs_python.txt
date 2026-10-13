@@ -1,0 +1,14 @@
+unit                       n_fg   n_bg |  py_total py_detect py_det_24t |  rust_1t rust_24t
+saureus_n20__r1              20   2173 |     14.3s      8.8s      6.2s |    1.79s    0.37s
+CRP                         206   1736 |     16.3s     12.1s      8.1s |    2.97s    0.41s
+CTCF__n250__r0              250   2500 |     11.9s      9.3s      7.3s |    2.40s    0.37s
+CTCF__n1000__r0            1000  10000 |     20.1s     18.2s      9.7s |    5.67s    0.63s
+CTCF                       5000  50000 |     81.7s     62.3s     18.4s |   21.35s    2.15s
+
+Machine: workstation, Ryzen 9 7900X (12 cores / 24 threads), WSL2, idle. Python F2 = proto/hlat.py v18 frozen flags;
+py_detect = cumulative find_seeds (real pass + 20 permutations); py_total adds the representation stage (EM, site
+refit), which hastur_core does not do. Rust = rust/hastur_core (validated identical to Python find_seeds).
+Rust 5k breakdown, 1 thread: count fg+bg 6.9 s, 20 permutations 14.2 s, statistics 0.1 s (pruned exact maximum).
+24 threads: count 0.68 s, permutations 1.4 s, total 2.17 s.
+Counting runs at ~2.3e9 window-increments/s per core (~2 cycles each): near the random-increment limit.
+STREME (permissive, box logs, same CPU family): D1 units median 185 s; ChIP 250 ~124 s; 1,000 ~556 s; 5k ~2,150 s.

@@ -1,0 +1,20 @@
+              n_sig  sig_p5  sig_contains  sig_sim85
+n    tool                                           
+25   hlat_f2  0.228   0.018         0.018      0.018
+     hlat_u1  0.228   0.018         0.018      0.018
+50   hlat_f2  0.719   0.368         0.175      0.404
+     hlat_u1  0.719   0.368         0.175      0.404
+100  hlat_f2  1.175   0.596         0.298      0.561
+     hlat_u1  1.263   0.596         0.298      0.561
+250  hlat_f2  1.596   0.754         0.316      0.719
+     hlat_u1  1.807   0.754         0.316      0.719
+500  hlat_f2  2.193   0.825         0.421      0.807
+     hlat_u1  2.509   0.842         0.421      0.842
+1000 hlat_f2  2.123   0.807         0.421      0.825
+     hlat_u1  2.298   0.807         0.421      0.825
+
+small-N nulls (fresh panel): false calls per run, runs with any
+         per_run  any_run
+tool                     
+hlat_f2    0.052    0.033
+hlat_u1    0.057    0.033

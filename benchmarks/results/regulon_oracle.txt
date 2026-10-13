@@ -1,0 +1,58 @@
+mean readout by kind:
+          contains     p5    sim  sites
+kind                                   
+other_tf     0.019  0.147  0.591  0.149
+shuffled     0.091  0.091  0.643  0.170
+truth        1.000  1.000  0.853  0.607
+
+site recovery quantiles by kind:
+           0.50   0.90   0.95   0.99
+kind                                
+other_tf  0.128  0.308  0.389  0.500
+shuffled  0.143  0.364  0.404  0.483
+truth     0.656  0.906  0.950  1.000
+
+sim quantiles by kind:
+           0.50   0.90   0.95   0.99
+kind                                
+other_tf  0.636  0.895  0.933  0.967
+shuffled  0.683  1.000  1.000  1.000
+truth     1.000  1.000  1.000  1.000
+
+per TF (truth row; shuffled and other-TF 95th percentiles):
+           contains    p5  sim  sites  sites95_other_tf  sites95_shuffled
+tf                                                                       
+ArcA           True  True  0.0   0.53              0.49              0.48
+ArgR           True  True  1.0   0.83              0.49              0.44
+CRP            True  True  1.0   0.80              0.22              0.19
+CpxR           True  True  1.0   0.60              0.21              0.16
+Cra            True  True  1.0   0.88              0.12              0.18
+CsgD           True  True  1.0   0.27              0.27              0.18
+CysB           True  True  1.0   0.75              0.45              0.42
+FNR            True  True  1.0   0.66              0.28              0.24
+FadR           True  True  1.0   0.88              0.11              0.18
+Fis            True  True  1.0   0.55              0.32              0.24
+Fur            True  True  1.0   0.68              0.40              0.40
+GadX           True  True  1.0   0.36              0.45              0.36
+GlaR           True  True  1.0   0.19              0.20              0.22
+H-NS           True  True  0.0   0.33              0.47              0.45
+IHF            True  True  1.0   0.34              0.30              0.28
+LexA           True  True  1.0   0.86              0.34              0.37
+Lrp            True  True  0.0   0.27              0.26              0.25
+MarA           True  True  0.0   0.50              0.30              0.10
+Nac            True  True  1.0   0.30              0.24              0.21
+NagC           True  True  1.0   1.00              0.38              0.38
+NarL           True  True  1.0   0.25              0.26              0.21
+NarP           True  True  1.0   0.20              0.30              0.30
+NsrR           True  True  1.0   0.65              0.31              0.27
+NtrC           True  True  1.0   0.92              0.20              0.34
+OmpR           True  True  1.0   0.45              0.37              0.31
+OxyR           True  True  1.0   0.47              0.33              0.32
+PdhR           True  True  1.0   0.92              0.28              0.16
+PhoB           True  True  1.0   0.67              0.32              0.34
+PhoP           True  True  1.0   0.77              0.22              0.20
+PurR           True  True  1.0   1.00              0.19              0.35
+RcsB-BglJ      True  True  1.0   0.82              0.40              0.55
+Rob            True  True  1.0   0.75              0.27              0.19
+SoxS           True  True  0.0   0.38              0.30              0.13
+ZraR           True  True  1.0   0.80              0.27              0.20
